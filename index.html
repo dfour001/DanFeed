@@ -10,13 +10,10 @@
 
     <title>DanFeed</title>
 
-    <link rel="shortcut icon" href="" type="image/x-icon">
-    <link rel="apple-touch-icon" href="">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Link to your css file -->
-    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/style2.css">
 
 </head>
 
@@ -24,7 +21,9 @@
 
     <div class="container-fluid py-2">
         <h1>DanFeed</h1>
-        <div class="card-deck headlines">
+        
+        <!-- Headline Cards -->
+        <div id="headlines" class="card-deck headlines">
             <div class="d-flex flex-row flex-nowrap">
 
                 <div class="card text-center far-left">
@@ -32,7 +31,7 @@
                     <div class="card-body">
                         <h4 class="card-title">The Huffington Post</h4>
                         <hr>
-                        <div>[HEADLINES]</div>
+                        <div id="the-huffington-post" class="headline-container">[HEADLINES]</div>
                     </div>
                 </div>
 
@@ -41,7 +40,7 @@
                     <div class="card-body">
                         <h4 class="card-title">MSNBC</h4>
                         <hr>
-                        <div>[HEADLINES]</div>
+                        <div id="msnbc" class="headline-container">[HEADLINES]</div>
                     </div>
                 </div>
 
@@ -50,7 +49,7 @@
                     <div class="card-body">
                         <h4 class="card-title">CNN</h4>
                         <hr>
-                        <div>[HEADLINES]</div>
+                        <div id="cnn" class="headline-container">[HEADLINES]</div>
                     </div>
                 </div>
 
@@ -59,7 +58,7 @@
                     <div class="card-body">
                         <h4 class="card-title">NBC News</h4>
                         <hr>
-                        <div>[HEADLINES]</div>
+                        <div id="nbc-news" class="headline-container">[HEADLINES]</div>
                     </div>
                 </div>
 
@@ -68,7 +67,7 @@
                     <div class="card-body">
                         <h4 class="card-title">Politico</h4>
                         <hr>
-                        <div>[HEADLINES]</div>
+                        <div id="politico" class="headline-container">[HEADLINES]</div>
                     </div>
                 </div>
 
@@ -77,7 +76,7 @@
                     <div class="card-body">
                         <h4 class="card-title">The Washington Post</h4>
                         <hr>
-                        <div>[HEADLINES]</div>
+                        <div id="the-washington-post" class="headline-container">[HEADLINES]</div>
                     </div>
                 </div>
 
@@ -86,7 +85,7 @@
                     <div class="card-body">
                         <h4 class="card-title">Associated Press</h4>
                         <hr>
-                        <div>[HEADLINES]</div>
+                        <div id="associated-press" class="headline-container">[HEADLINES]</div>
                     </div>
                 </div>
 
@@ -95,7 +94,16 @@
                     <div class="card-body">
                         <h4 class="card-title">Reuters</h4>
                         <hr>
-                        <div>[HEADLINES]</div>
+                        <div id="reuters" class="headline-container">[HEADLINES]</div>
+                    </div>
+                </div>
+
+                <div class="card text-center weather">
+                    <div class="card-header">Weather</div>
+                    <div class="card-body">
+                        <h4 class="card-title">Weather Source</h4>
+                        <hr>
+                        <div id="weather">[WEATHER]</div>
                     </div>
                 </div>
 
@@ -104,7 +112,7 @@
                     <div class="card-body">
                         <h4 class="card-title">The Hill</h4>
                         <hr>
-                        <div>[HEADLINES]</div>
+                        <div id="the-hill" class="headline-container">[HEADLINES]</div>
                     </div>
                 </div>
 
@@ -113,7 +121,7 @@
                     <div class="card-body">
                         <h4 class="card-title">USA Today</h4>
                         <hr>
-                        <div>[HEADLINES]</div>
+                        <div id="usa-today" class="headline-container">[HEADLINES]</div>
                     </div>
                 </div>
 
@@ -122,7 +130,7 @@
                     <div class="card-body">
                         <h4 class="card-title">The Wall Street Journal</h4>
                         <hr>
-                        <div>[HEADLINES]</div>
+                        <div id="the-wall-street-journal" class="headline-container">[HEADLINES]</div>
                     </div>
                 </div>
 
@@ -131,7 +139,7 @@
                     <div class="card-body">
                         <h4 class="card-title">Fox News</h4>
                         <hr>
-                        <div>[HEADLINES]</div>
+                        <div id="fox-news" class="headline-container">[HEADLINES]</div>
                     </div>
                 </div>
 
@@ -140,7 +148,7 @@
                     <div class="card-body">
                         <h4 class="card-title">The Washington Times</h4>
                         <hr>
-                        <div>[HEADLINES]</div>
+                        <div id="the-washington-times" class="headline-container">[HEADLINES]</div>
                     </div>
                 </div>
 
@@ -149,7 +157,7 @@
                     <div class="card-body">
                         <h4 class="card-title">The American Conservative</h4>
                         <hr>
-                        <div>[HEADLINES]</div>
+                        <div id="the-american-conservative" class="headline-container">[HEADLINES]</div>
                     </div>
                 </div>
 
@@ -158,7 +166,7 @@
                     <div class="card-body">
                         <h4 class="card-title">National Review</h4>
                         <hr>
-                        <div>[HEADLINES]</div>
+                        <div id="national-review" class="headline-container">[HEADLINES]</div>
                     </div>
                 </div>
 
@@ -167,17 +175,20 @@
                     <div class="card-body">
                         <h4 class="card-title">Breitbart News</h4>
                         <hr>
-                        <div>[HEADLINES]</div>
+                        <div id="breitbart-news" class="headline-container">[HEADLINES]</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Coding End -->
-
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Bootstrap Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body></html>
+    
+    <!-- Load headlines from python -->
+    <script src="js/getHeadlines.js"></script>
+</body>
+
+</html>

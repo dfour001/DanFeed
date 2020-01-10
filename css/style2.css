@@ -1,0 +1,64 @@
+html, body {
+    overflow-y: hidden;
+    background: #f8f9fa;
+}
+
+.container-fluid {
+    padding: 0px;
+}
+
+.headlines {
+    overflow-x: auto;
+}
+
+.card {
+    min-width: calc(100vw - 20px);
+    margin: 10px;
+    height: calc(75vh);
+    border-radius: 10px;
+    box-shadow: 3px 5px 15px rgba(0,0,0,0.25);
+    overflow-y: hidden;
+}
+
+.card-body {
+    overflow-y: auto;
+}
+
+.article {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 0.75em;
+    text-align: left;
+    box-shadow: (5px, 5px, 5px, black)
+}
+
+.headline-container {
+    overflow-y: auto;
+}
+
+.far-left {
+    border: 3px solid #3033ee;
+}
+
+.left {
+    border: 3px solid #5933c8;
+}
+
+.center {
+    border: 3px solid #9f328a;
+}
+
+.right {
+    
+    border: 3px solid #cb3261;
+}
+
+.far-right {
+    border: 3px solid #fe3233;
+}
+
+.weather {
+    border: 3px solid grey;
+}
