@@ -3,6 +3,12 @@ html, body {
     background: #f8f9fa;
 }
 
+h1 {
+    font-family: 'Merriweather', serif;
+    margin: 0px;
+    margin-left: 25px;
+}
+
 /* Headline Card Titles */
 .card-header h4 {
     font-size: 1.2rem;
@@ -24,12 +30,16 @@ html, body {
 
 .headlines {
     overflow-x: auto;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: calc(50vh - (83vh / 2));
 }
 
 .card {
     min-width: calc(100vw - 20px);
     margin: 10px;
-    height: calc(75vh);
+    height: calc(83vh);
     border-radius: 10px;
     box-shadow: 3px 5px 15px rgba(0,0,0,0.25);
     overflow-y: hidden;

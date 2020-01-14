@@ -1,6 +1,7 @@
 // Temp load json directly
 var headlines;
 
+/*
 $.ajax({
     dataType: "json",
     url: "./headlines/headlines.json",
@@ -10,8 +11,30 @@ $.ajax({
     },
     error: function () {
         console.log(":(");
+        
     }
 });
+*/
+
+$.ajax({
+    dataType: "json",
+    url: "http://dfour001.pythonanywhere.com/getHeadlines",
+    success: function (r) {
+        // Load headlines and populate headline cards
+        populate_headline_cards(r);
+        
+        // Hide loading animation and show headline cards
+        $("#loadingAnimation").addClass("d-none");
+        $("#headlines").removeClass("d-none");
+        
+        // Animate cards to weather card
+        center_view();
+    },
+    error: function() {
+        console.log(":(");
+        center_view();
+    }
+})
 
 
 function populate_headline_cards(r) {
@@ -19,6 +42,8 @@ function populate_headline_cards(r) {
 
     let sources = Object.keys(headlines);
 
+    console.log(headlines);
+    console.log(sources);
     for (let i = 0; i < sources.length; i++) {
         let curSource = headlines[sources[i]];
         // Check if headline loading was successful
@@ -46,6 +71,7 @@ function populate_headline_cards(r) {
 function build_article_html(article) {
     articleHTML = "<b>" + article.title + "</b>";
     articleHTML += "<p>" + article.description + "</p>";
+    articleHTML += "<small>Published " + format_date(article.publishedAt) + "</small><br>"
     articleHTML += "<small>Open Article</small><br>";
 
     output = "<div class='article'>" + articleHTML + "</div>";
@@ -57,4 +83,10 @@ function center_view() {
     let scrollDistance = $('.weather').position().left;
     $('#headlines').animate({scrollLeft: scrollDistance}, 800);
 
+}
+
+function format_date(inputDate) {
+    date = new Date(inputDate);
+    date = (date.getMonth() + 1) + '-' + date.getDate() + '-' + date.getFullYear() + ' at ' + date.getHours() + ':' + date.getMinutes();
+    return date
 }

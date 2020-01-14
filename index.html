@@ -12,8 +12,13 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet"> 
+    
     <!-- Link to your css file -->
-    <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/style4.css">
+    <link rel="stylesheet" href="css/loader.css">
 
 </head>
 
@@ -21,9 +26,10 @@
 
     <div class="container-fluid py-2">
         <h1>DanFeed</h1>
+        <div id="loadingAnimation"><div class="lds-facebook"><div></div><div></div><div></div></div></div>
         
         <!-- Headline Cards -->
-        <div id="headlines" class="card-deck headlines">
+        <div id="headlines" class="card-deck headlines d-none">
             <div class="d-flex flex-row flex-nowrap">
 
                 <div class="card text-center far-left">
